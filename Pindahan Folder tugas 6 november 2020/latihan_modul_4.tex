@@ -1,0 +1,335 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Latihan Modul 4},
+  pdfauthor={Nicholas Nanda S},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\title{Latihan Modul 4}
+\author{Nicholas Nanda S}
+\date{11/3/2020}
+
+\begin{document}
+\maketitle
+
+\hypertarget{deskripsi}{%
+\subsection{Deskripsi}\label{deskripsi}}
+
+Ini adalah dokumen R markdown, dibuat untuk menyelesaikan tugas
+praktikum data science latihan modul 4.
+
+\hypertarget{import-library-dan-dataset}{%
+\subsection{Import Library dan
+Dataset}\label{import-library-dan-dataset}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(dslabs)}
+\KeywordTok{data}\NormalTok{(}\StringTok{"murders"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{assign-pop-value}{%
+\subsection{1. Assign pop value}\label{assign-pop-value}}
+
+Menyimpan data populasi pada variable pop
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{pop <-}\StringTok{ }\NormalTok{murders}\OperatorTok{$}\NormalTok{population}
+\NormalTok{pop}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1]  4779736   710231  6392017  2915918 37253956  5029196  3574097   897934
+##  [9]   601723 19687653  9920000  1360301  1567582 12830632  6483802  3046355
+## [17]  2853118  4339367  4533372  1328361  5773552  6547629  9883640  5303925
+## [25]  2967297  5988927   989415  1826341  2700551  1316470  8791894  2059179
+## [33] 19378102  9535483   672591 11536504  3751351  3831074 12702379  1052567
+## [41]  4625364   814180  6346105 25145561  2763885   625741  8001024  6724540
+## [49]  1852994  5686986   563626
+\end{verbatim}
+
+Sorting data populasi
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{popSort <-}\StringTok{ }\KeywordTok{sort}\NormalTok{(pop)}
+\end{Highlighting}
+\end{Shaded}
+
+Nilai populasi terkecil
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{popSort[}\DecValTok{1}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 563626
+\end{verbatim}
+
+\hypertarget{indeks-populasi-terkecil}{%
+\subsection{2. Indeks populasi
+terkecil}\label{indeks-populasi-terkecil}}
+
+Menampilkan indeks tiap-tiap data populasi dan terurut dari yang
+terkecil
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{pop}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1]  4779736   710231  6392017  2915918 37253956  5029196  3574097   897934
+##  [9]   601723 19687653  9920000  1360301  1567582 12830632  6483802  3046355
+## [17]  2853118  4339367  4533372  1328361  5773552  6547629  9883640  5303925
+## [25]  2967297  5988927   989415  1826341  2700551  1316470  8791894  2059179
+## [33] 19378102  9535483   672591 11536504  3751351  3831074 12702379  1052567
+## [41]  4625364   814180  6346105 25145561  2763885   625741  8001024  6724540
+## [49]  1852994  5686986   563626
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{order}\NormalTok{(pop)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] 51  9 46 35  2 42  8 27 40 30 20 12 13 28 49 32 29 45 17  4 25 16  7 37 38
+## [26] 18 19 41  1  6 24 50 21 26 43  3 15 22 48 47 31 34 23 11 36 39 14 33 10 44
+## [51]  5
+\end{verbatim}
+
+\hypertarget{fungsi-which.min}{%
+\subsection{3. Fungsi which.min}\label{fungsi-which.min}}
+
+Dengan menggunakkan fungsi which.min untuk membuat hasil seperti
+sebelumnya.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{minMurder <-}\StringTok{ }\KeywordTok{which.min}\NormalTok{(murders}\OperatorTok{$}\NormalTok{population)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{nama-negara-dengan-populasi-terkecil}{%
+\subsection{4. Nama Negara dengan Populasi
+terkecil}\label{nama-negara-dengan-populasi-terkecil}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{murders}\OperatorTok{$}\NormalTok{state[minMurder]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Wyoming"
+\end{verbatim}
+
+\hypertarget{peringkat-populasi-negara}{%
+\subsection{5. Peringkat Populasi
+Negara}\label{peringkat-populasi-negara}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ranks <-}\StringTok{ }\KeywordTok{rank}\NormalTok{(murders}\OperatorTok{$}\NormalTok{population)}
+\NormalTok{my_df <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{Nama =}\NormalTok{ murders}\OperatorTok{$}\NormalTok{state, }\DataTypeTok{Ranking =}\NormalTok{ ranks)}
+\KeywordTok{head}\NormalTok{(my_df)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##         Nama Ranking
+## 1    Alabama      29
+## 2     Alaska       5
+## 3    Arizona      36
+## 4   Arkansas      20
+## 5 California      51
+## 6   Colorado      30
+\end{verbatim}
+
+\hypertarget{peringkat-populasi-negara-terurut-terkecil}{%
+\subsection{6. Peringkat Populasi Negara (terurut
+terkecil)}\label{peringkat-populasi-negara-terurut-terkecil}}
+
+Mengulangi langkah sebelumnya untuk mengurutkan populasi negara dari
+yang terkecil
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ranks <-}\StringTok{ }\KeywordTok{rank}\NormalTok{(murders}\OperatorTok{$}\NormalTok{population)}
+\NormalTok{my_df <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{Nama =}\NormalTok{ murders}\OperatorTok{$}\NormalTok{state, }\DataTypeTok{Ranking =}\NormalTok{ ranks)}
+\NormalTok{ind <-}\StringTok{ }\KeywordTok{order}\NormalTok{(my_df}\OperatorTok{$}\NormalTok{Ranking)}
+\NormalTok{my_df}\OperatorTok{$}\NormalTok{Nama[ind]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] "Wyoming"              "District of Columbia" "Vermont"             
+##  [4] "North Dakota"         "Alaska"               "South Dakota"        
+##  [7] "Delaware"             "Montana"              "Rhode Island"        
+## [10] "New Hampshire"        "Maine"                "Hawaii"              
+## [13] "Idaho"                "Nebraska"             "West Virginia"       
+## [16] "New Mexico"           "Nevada"               "Utah"                
+## [19] "Kansas"               "Arkansas"             "Mississippi"         
+## [22] "Iowa"                 "Connecticut"          "Oklahoma"            
+## [25] "Oregon"               "Kentucky"             "Louisiana"           
+## [28] "South Carolina"       "Alabama"              "Colorado"            
+## [31] "Minnesota"            "Wisconsin"            "Maryland"            
+## [34] "Missouri"             "Tennessee"            "Arizona"             
+## [37] "Indiana"              "Massachusetts"        "Washington"          
+## [40] "Virginia"             "New Jersey"           "North Carolina"      
+## [43] "Michigan"             "Georgia"              "Ohio"                
+## [46] "Pennsylvania"         "Illinois"             "New York"            
+## [49] "Florida"              "Texas"                "California"
+\end{verbatim}
+
+\newpage
+
+\hypertarget{visualisasi-menggunakan-plot}{%
+\subsection{7. Visualisasi menggunakan
+Plot}\label{visualisasi-menggunakan-plot}}
+
+Analisis total pembunuhan dengan jumlah populasi.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{population_in_millions <-}\StringTok{ }\NormalTok{murders}\OperatorTok{$}\NormalTok{population}\OperatorTok{/}\DecValTok{10}\OperatorTok{^}\DecValTok{6} 
+\NormalTok{total_gun_murders <-}\StringTok{ }\NormalTok{murders}\OperatorTok{$}\NormalTok{total }
+\KeywordTok{plot}\NormalTok{(}\KeywordTok{log10}\NormalTok{(population_in_millions), total_gun_murders)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{latihan_modul_4_files/figure-latex/ploting-1.pdf}
+
+\newpage
+
+\hypertarget{histogram-populasi-negara-bagian}{%
+\subsection{8. Histogram Populasi Negara
+Bagian}\label{histogram-populasi-negara-bagian}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{populasi <-}\StringTok{ }\KeywordTok{with}\NormalTok{(murders, murders}\OperatorTok{$}\NormalTok{population}\OperatorTok{/}\DecValTok{10}\OperatorTok{^}\DecValTok{6}\NormalTok{)}
+\KeywordTok{hist}\NormalTok{(populasi, }\DataTypeTok{main =} \StringTok{"Populasi Negara Bagian"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{latihan_modul_4_files/figure-latex/histogram-1.pdf}
+
+\newpage
+
+\hypertarget{boxplot-populasi-negara-bagian-wilayah}{%
+\subsection{9. Boxplot Populasi Negara Bagian/
+wilayah}\label{boxplot-populasi-negara-bagian-wilayah}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{boxplot}\NormalTok{(population}\OperatorTok{~}\NormalTok{region, }\DataTypeTok{data =}\NormalTok{ murders)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{latihan_modul_4_files/figure-latex/boxplot-1.pdf}
+
+\end{document}

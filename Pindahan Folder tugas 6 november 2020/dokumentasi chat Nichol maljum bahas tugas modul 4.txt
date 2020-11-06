@@ -1,0 +1,39 @@
+Nicholas N. Sulaksana
+20.53
+install.packages("installr") and library(installr)
+Nicholas N. Sulaksana
+20.55
+updateR()
+Nicholas N. Sulaksana
+21.10
+http://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe
+Nicholas N. Sulaksana
+21.25
+nstall.packages("dslabs")
+Nicholas N. Sulaksana
+21.38
+ranks <- rank(murders$population)
+my_df <- data.frame(Nama = murders$state, Ranking = ranks)
+Nicholas N. Sulaksana
+21.40
+ranks <- rank(murders$population)
+my_df <- data.frame(Nama = murders$state, Ranking = ranks)
+ind <- order(my_df$Ranking)
+my_df$Nama[ind]
+Nicholas N. Sulaksana
+21.46
+population_in_millions <- log10(murders$population/10^6)
+plot(log10(population_in_millions), total_gun_murders)
+population_in_millions <- log10(population_in_millions)
+Nicholas N. Sulaksana
+21.48
+hist(murders$population)
+boxplot(population~region, data = murders)
+Nicholas N. Sulaksana
+21.54
+https://github.com/hujikol/praktikum2020/blob/master/latihan_modul_4.Rmd
+https://github.com/hujikol/praktikum2020/blob/master/latihan_modul_4.pdf
+Nicholas N. Sulaksana
+22.07
+strl+alt+i
+ctrl

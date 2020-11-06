@@ -1,0 +1,117 @@
+---
+title: "Latihan modul 4 praktikum DS"
+author: "Ridwan Fakhruddin"
+date: "06/11/2020"
+output : pdf_document
+  
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Deskripsi 
+
+PDF RMarkdown ini dibuat untuk menyelesaikan tugas pertemuan 6 Praktikum DS Latihan modul 4
+
+## Import Library dslabs dan dataset murders
+
+
+```{r murder}
+library(dslabs)
+data("murders")
+```
+
+## 1. Masukkan Nilai pop
+
+Simpan data populasi pada variabel pop
+
+```{r pop}
+pop <- murders$population
+pop
+```
+
+Sorting data populasi
+
+```{r sort}
+popUrut <- sort(pop)
+```
+
+Tampilkan nilai populasi terkecil
+
+```{r}
+popUrut[1]
+```
+
+## 2. Indeks populasi terkecil
+
+Menampilkan indeks tiap data populasi yang terurut dan mulai dari yang terkecil
+
+```{r order}
+pop
+order(pop)
+```
+
+## 3. Fungsi which.min
+
+Gunakan fungsi which.min untuk membuat hasil yang sama dengan langkah sebelumnya
+
+```{r which popUrutMin}
+popUrutMin <- which.min(murders$population)
+popUrutMin
+```
+
+## 4. Nama Negara dengan Populasi terkecil
+
+```{r popUrutMin}
+murders$state[popUrutMin]
+```
+
+## 5. Peringkat Populasi Negara
+
+```{r ranks}
+ranks <- rank(murders$population)
+my_df <- data.frame(Nama = murders$state, Ranking = ranks)
+head(my_df)
+```
+
+## 6. Peringkat Populasi Negara (terurut terkecil)
+
+Urutkan populasi negara dari yang terkecil dengan mengulang langkah sebelumnya
+
+```{r minimumRanks}
+ranks <- rank(murders$population)
+my_df <- data.frame(Nama = murders$state, Ranking = ranks)
+ind <- order(my_df$Ranking)
+my_df$Nama[ind]
+```
+
+\newpage
+## 7. Visualisasi data menggunakan Plot
+
+visualisasikan total pembunuhan terhadap populasi dan mengidentifikasi hubungan antara keduanya
+
+```{r plot}
+population_in_millions <- murders$population/10^6 
+total_gun_murders <- murders$total 
+plot(log10(population_in_millions), total_gun_murders)
+```
+
+\newpage
+## 8. Buat Histogram dari Populasi Negara Bagian
+
+Buat histogram dari populasi negara bagian
+
+```{r histogram}
+histogram <- with(murders, total / population * 100000) 
+hist(histogram)
+```
+
+\newpage
+## 9. Boxplot Populasi Negara Bagian/wilayah
+
+Hasilkan boxplot dari populasi negara bagian berdasarkan wilayahnya
+
+```{r boxplot}
+boxplot(population~region, data = murders)
+```
